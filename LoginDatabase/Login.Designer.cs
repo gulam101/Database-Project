@@ -30,6 +30,7 @@
         {
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.databaseLBL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Login
@@ -51,11 +52,22 @@
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
+            // databaseLBL
+            // 
+            this.databaseLBL.AutoSize = true;
+            this.databaseLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.databaseLBL.Location = new System.Drawing.Point(185, 23);
+            this.databaseLBL.Name = "databaseLBL";
+            this.databaseLBL.Size = new System.Drawing.Size(127, 25);
+            this.databaseLBL.TabIndex = 2;
+            this.databaseLBL.Text = "DatabaseX";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 416);
+            this.Controls.Add(this.databaseLBL);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -64,6 +76,7 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,6 +84,7 @@
 
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Label databaseLBL;
     }
 }
 
