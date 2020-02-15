@@ -31,6 +31,7 @@
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.databaseLBL = new System.Windows.Forms.Label();
+            this.btn_Help = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Login
@@ -62,15 +63,26 @@
             this.databaseLBL.TabIndex = 2;
             this.databaseLBL.Text = "DatabaseX";
             // 
+            // btn_Help
+            // 
+            this.btn_Help.Location = new System.Drawing.Point(12, 381);
+            this.btn_Help.Name = "btn_Help";
+            this.btn_Help.Size = new System.Drawing.Size(75, 23);
+            this.btn_Help.TabIndex = 3;
+            this.btn_Help.Text = "Help";
+            this.btn_Help.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 416);
+            this.Controls.Add(this.btn_Help);
             this.Controls.Add(this.databaseLBL);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -85,6 +97,7 @@
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Label databaseLBL;
+        private System.Windows.Forms.Button btn_Help;
     }
 }
 
