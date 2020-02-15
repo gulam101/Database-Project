@@ -16,5 +16,17 @@ namespace LoginDatabase
         {
             InitializeComponent();
         }
+
+        private void Btn_Exit_Click(object sender, EventArgs e)
+        {
+            var exitapplication = MessageBox.Show("Are you sure you want to quit?",
+                "Are you sure?", MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Warning);
+
+            if(exitapplication == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
