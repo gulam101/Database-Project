@@ -19,8 +19,10 @@ namespace LoginDatabase
 
         private void Btn_Exit_Click(object sender, EventArgs e)
         {
-            var exitapplication = MessageBox.Show("Are you sure you want to quit?",
-                "Are you sure?", MessageBoxButtons.YesNoCancel,
+            const string exitMessage = "Are you sure you want to quit?";
+            const string exitCapation = "Exit Application";
+
+            var exitapplication = MessageBox.Show(exitMessage, exitCapation, MessageBoxButtons.YesNoCancel,
                 MessageBoxIcon.Warning);
 
             if(exitapplication == DialogResult.Yes)
