@@ -28,5 +28,38 @@ namespace LoginDatabase
                 Application.Exit();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (CloseCancel() == false)
+            {
+                e.Cancel = true;
+            };
+        }
+
+
+        public static bool CloseCancel()
+        {
+            const string message = "Are you sure you want to exit the application? Any unsaved work will be lost!";
+            const string caption = "Exit application";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
