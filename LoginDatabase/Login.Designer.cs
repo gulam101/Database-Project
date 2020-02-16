@@ -35,8 +35,8 @@
             this.username_lbl = new System.Windows.Forms.Label();
             this.username_textbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.password_textbox = new System.Windows.Forms.TextBox();
             this.password_lbl = new System.Windows.Forms.Label();
+            this.password_textbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,15 +48,17 @@
             this.btn_Login.TabIndex = 0;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // btn_Exit
             // 
+            this.btn_Exit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Exit.Location = new System.Drawing.Point(426, 381);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(75, 23);
             this.btn_Exit.TabIndex = 1;
             this.btn_Exit.Text = "Exit";
-            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
             // database_lbl
@@ -94,6 +96,7 @@
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(157, 20);
             this.username_textbox.TabIndex = 5;
+            this.username_textbox.TextChanged += new System.EventHandler(this.Username_textbox_TextChanged);
             // 
             // panel1
             // 
@@ -106,13 +109,6 @@
             this.panel1.Size = new System.Drawing.Size(208, 144);
             this.panel1.TabIndex = 6;
             // 
-            // password_textbox
-            // 
-            this.password_textbox.Location = new System.Drawing.Point(21, 95);
-            this.password_textbox.Name = "password_textbox";
-            this.password_textbox.Size = new System.Drawing.Size(157, 20);
-            this.password_textbox.TabIndex = 6;
-            // 
             // password_lbl
             // 
             this.password_lbl.AutoSize = true;
@@ -123,10 +119,19 @@
             this.password_lbl.TabIndex = 7;
             this.password_lbl.Text = "Password";
             // 
+            // password_textbox
+            // 
+            this.password_textbox.Location = new System.Drawing.Point(21, 95);
+            this.password_textbox.Name = "password_textbox";
+            this.password_textbox.Size = new System.Drawing.Size(157, 20);
+            this.password_textbox.TabIndex = 6;
+            this.password_textbox.TextChanged += new System.EventHandler(this.Password_textbox_TextChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(513, 416);
             this.Controls.Add(this.btn_Help);
             this.Controls.Add(this.database_lbl);

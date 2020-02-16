@@ -63,5 +63,32 @@ namespace LoginDatabase
             }
         }
 
+        private void Username_textbox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Password_textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Login_Click(object sender, EventArgs e)
+        {
+            int username;
+            Int32.TryParse(username_textbox.Text, out username);
+
+            if (username < 1)
+            {
+                MessageBox.Show("Username cannot be blank!");
+            }
+        }
+
+        public static void IncorrectName(string messgae)
+        {
+            
+        }
+
+
     }
 }
